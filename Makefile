@@ -12,8 +12,8 @@ HEADERS = $(wildcard $(HEADER_DIR)/*.h)
 PRECOMPILED_HEADER_SUFFIX = .gch
 PRECOMPILED_HEADERS = $(addsuffix $(PRECOMPILED_HEADER_SUFFIX), $(HEADERS))
 
-.PHONY: all
-all: $(TARGET)
+.PHONY: run
+run: $(TARGET)
 	./$(TARGET) $(ARGS)
 
 .PHONY: clean
