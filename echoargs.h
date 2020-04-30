@@ -13,6 +13,17 @@ class Args {
  private:
   std::vector<std::string> vals;
 };
+
+enum class EchoStatus {
+  SUCCESS,
+  FAILURE,
+};
+
+class Echoer {
+ public:
+  virtual ~Echoer() {}
+  virtual EchoStatus Echo(const Args&) const = 0;
+};
 }  // namespace echoargs
 
 #endif
