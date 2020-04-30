@@ -14,7 +14,7 @@ PRECOMPILED_HEADERS = $(addsuffix $(PRECOMPILED_HEADER_SUFFIX), $(HEADERS))
 
 .PHONY: all
 all: $(TARGET)
-	./$(TARGET)
+	./$(TARGET) $(ARGS)
 
 .PHONY: clean
 clean:
