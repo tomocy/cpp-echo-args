@@ -16,6 +16,9 @@ PRECOMPILED_HEADERS = $(addsuffix $(PRECOMPILED_HEADER_SUFFIX), $(HEADERS))
 run: $(TARGET)
 	./$(TARGET) $(ARGS)
 
+.PHONY: build
+build: $(TARGET)
+
 .PHONY: clean
 clean:
 	rm -rf $(TARGET)
